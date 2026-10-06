@@ -2,6 +2,7 @@
 import Marquee from "@/components/Marquee";
 import MainNews from "@/components/MainNews";
 import NewsCard from "@/components/NewsCard";
+import MostRead from "@/components/MostRead";
 interface IArticles {
   id: string,
   title: string,
@@ -47,8 +48,9 @@ const blockedSections = [
             }
           </div>
         </div>
-        <div className="sm:col-span-1">
-          <h2>সর্বাধিক পঠিত</h2>
+        <div className="sm:col-span-1 mt-5 border border-gray-300 rounded-xl px-2">
+          <h2 className="font-bold text-2xl pt-2">সর্বাধিক পঠিত</h2>
+          <MostRead></MostRead>
         </div>
       </div>
     </div>
