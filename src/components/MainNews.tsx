@@ -10,7 +10,7 @@ interface INews {
 const MainNews = ({ news }: { news: INews[] }) => {
     const [firstNews, ...otherNews] = news
     return (
-        <div className='sm:grid sm:grid-cols-2 mx-2 my-2'>
+        <div className='sm:grid sm:grid-cols-2 mx-2 my-5'>
             <div className="card bg-base-100  shadow-sm">
                 <figure >
                     <Image src={firstNews.imageUrl} alt={firstNews.imageAlt} width={100} height={100} className="w-full  "></Image>
