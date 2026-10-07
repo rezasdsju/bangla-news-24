@@ -1,14 +1,6 @@
 
 import Image from "next/image";
-interface INews {
-  id:string,
-  title:string,
-  imageUrl:string,
-  imageAlt: string,
-  description:string,
-  category:string,
-  lastPublished: string|null
-}
+import {INews} from '@/types/news.types'
 const NewsCard = ({news}:{news:INews}) => {
   
     return (
