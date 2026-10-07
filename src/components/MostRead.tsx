@@ -1,3 +1,4 @@
+import Link from "next/link";
 interface IMostReadNews {
     id: string,
     title: string
@@ -11,12 +12,12 @@ const MostRead = async () => {
         <div className="card p-2 bg-base-100 ">
             <div>
                 {
-                    mostReadNews.map((news: IMostReadNews, index: number) => <div key={news.id} className="border-b border-gray-200 py-2">
+                    mostReadNews.map((news: IMostReadNews, index: number) => <Link href={`/news/${news.id}`} key={news.id} className="border-b border-gray-200 py-2">
                         <div className="flex gap-2 items-center">
                             <span className="text-red-600 font-bold">{index + 1}</span>
-                            <h2>{news.title}</h2>
+                            <h2 className="hover:underline">{news.title}</h2>
                         </div>
-                    </div>)
+                    </Link>)
                 }
             </div>
         </div>
