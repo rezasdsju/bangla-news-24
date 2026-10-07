@@ -1,5 +1,5 @@
 
-import Marquee from "@/components/Marquee";
+
 import MainNews from "@/components/MainNews";
 import NewsCard from "@/components/NewsCard";
 import MostRead from "@/components/MostRead";
@@ -31,7 +31,7 @@ const blockedSections = [
   const otherSections = sections.slice(1)
   return (
     <div >
-      <Marquee></Marquee>
+
       <div className="sm:grid sm:grid-cols-3 max-w-7xl mx-auto">
         <div className="sm:col-span-2">
           <MainNews news={mainNews}></MainNews>
