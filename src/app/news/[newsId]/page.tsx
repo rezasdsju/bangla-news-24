@@ -1,13 +1,23 @@
 import Image from "next/image";
-interface IBodyItem {
-    type: "text" | "image" | "subheading";
+interface ITextItem {
+    type: "text";
     text: string;
-    url: string;
+}
 
+interface ISubheadingItem {
+    type: "subheading";
+    text: string;
+}
+
+interface IImageItem {
+    type: "image";
+    url: string;
     caption: string;
     altText: string;
     copyrightHolder?: string;
 }
+
+type IBodyItem = ITextItem | ISubheadingItem | IImageItem;
 interface ITopic {
     id:string,
     name:string
@@ -33,7 +43,7 @@ const NewsDetailsPage = async ({ params }: { params: { newsId: string } }) => {
              {detailNews.body.map((item:IBodyItem,index:number)=>            <div key={index}>
                
                 {
-                    item.type==='text' && <p className="pb-2 text-justify">{item.text}</p>
+                    item.type==='text' && <p className="pb-2 text-justify">{item.text!=='বিবিসি বাংলার হোয়াটসঅ্যাপ চ্যানেল ফলো করতে এখানে ক্লিক/ট্যাপ করুন' && item.text}</p>
                 }
                         {item.type === "subheading" && (
             <h2 className="text-2xl font-bold my-5">
