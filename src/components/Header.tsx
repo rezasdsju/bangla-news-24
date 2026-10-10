@@ -1,5 +1,6 @@
 import Image from "next/image";
 import NavLinks from "./NavLinks";
+import UserInfo from "./UserInfo";
 const Header = () => {
     const date = new Date().toLocaleDateString('bn-BD', { dateStyle: 'full' })
     return (
@@ -14,10 +15,7 @@ const Header = () => {
                     </div>
                 </div>
 
-                <div className=" right-4 top-4 flex items-center min-[355px]:gap-1 min-[395px]:gap-3 text-sm sm:absolute ml-2 sm:ml-0">
-                    <button className="btn">সাইন ইন</button>
-                    <button className="btn bg-red-600 text-white">সাইন আপ</button>
-                </div>
+                <UserInfo></UserInfo>
             </div>
             <NavLinks></NavLinks>
         </header>

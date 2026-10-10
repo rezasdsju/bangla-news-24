@@ -10,7 +10,7 @@ const MostRead = async () => {
     const mostReadNews = data.data
     return (
         <div className="card p-2 bg-base-100 ">
-            <div>
+            <div className="flex flex-col item justify-center gap-3">
                 {
                     mostReadNews.map((news: IMostReadNews, index: number) => <Link href={`/news/${news.id}`} key={news.id} className="border-b border-gray-200 py-2">
                         <div className="flex gap-2 items-center">
