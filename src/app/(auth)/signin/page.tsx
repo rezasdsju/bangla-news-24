@@ -1,5 +1,6 @@
 'use client'
 import { authClient } from "@/lib/auth-client";
+import Link from "next/link";
 
 import React from "react";
 import { FcGoogle } from "react-icons/fc";
@@ -66,7 +67,7 @@ const SignInPage = () => {
                         </div>
                     </div>
                     <div className="mx-auto mt-4">
-                        <span>অ্যাকাউন্ট নাই? <span className="text-green-700">সাইন আপ করুন</span></span>
+                        <span>অ্যাকাউন্ট নাই? <Link href='/signup' className="text-green-700">সাইন আপ করুন</Link></span>
                     </div>
                 </fieldset>
             </form>
