@@ -54,7 +54,7 @@ const UserInfo = () => {
 
 
 {
-    showUserDropDown && 
+    (showUserDropDown && session?.user) && 
                 <div className='bg-red-50 border border-gray-200 px-3 py-5 rounded-2xl right-4 top-15 absolute z-50 space-y-3'>
                 <div>
                     <h2 className="text-bold">{session?.user?.name}</h2>
