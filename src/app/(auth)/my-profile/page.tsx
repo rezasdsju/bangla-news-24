@@ -44,7 +44,7 @@ const MyProfilePage = () => {
                 <div className="px-3 py-2 rounded-2xl">
                     <h2 className=" text-center font-bold text-2xl">আমার প্রোফাইল</h2>
                 </div>
-                <div className="flex flex-col min-[310px]:flex-row items-center justify-between border border-gray-100 rounded-2xl px-3 py-3 gap-10">
+                <div className="flex flex-col min-[390px]:flex-row items-center justify-between border border-gray-100 rounded-2xl px-3 py-3 gap-10">
                     <div className="flex items-center justify-center gap-2">
                         <div>
                             {
