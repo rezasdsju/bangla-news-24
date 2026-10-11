@@ -9,6 +9,7 @@ const db = client.db("bangla-news-24");
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const auth = betterAuth({
+    
     emailAndPassword: {
         enabled: true,
         requireEmailVerification: false,
@@ -33,6 +34,24 @@ export const auth = betterAuth({
             console.log("Verification email sent:", data.id);
         },
     },
+    socialProviders: {
+        google: {
+            clientId: process.env.GOOGLE_CLIENT_ID as string,
+            clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
+
+        },
+        github: {
+            clientId: process.env.GITHUB_CLIENT_ID as string,
+            clientSecret: process.env.GITHUB_CLIENT_SECRET as string,
+        },
+    },
+	account: {
+		accountLinking: {
+			enabled: true,
+			trustedProviders: ["google", "github"], // add your providers
+		},
+	},
+
 
     database: mongodbAdapter(db, {
         client,
