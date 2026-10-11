@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { notFound } from "next/navigation";
 interface ITextItem {
     type: "text";
     text: string;
@@ -26,6 +27,9 @@ const NewsDetailsPage = async ({ params }: { params: { newsId: string } }) => {
     const { newsId } = await params
     const res = await fetch(`https://news-api-v2.vercel.app/api/article/${newsId}`)
     const data = await res.json()
+    if (!res.ok){
+        notFound()
+    }  
     const detailNews = data.data
     return (
         <div className="max-w-4xl mx-auto my-5 px-2">
