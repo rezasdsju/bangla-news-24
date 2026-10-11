@@ -5,6 +5,7 @@ import React from "react";
 import { FcGoogle } from "react-icons/fc";
 import { toast } from "react-toastify";
 import { LiaGithub } from "react-icons/lia";
+import Link from "next/link";
 
 
 const SignUpPage = () => {
@@ -76,7 +77,7 @@ const SignUpPage = () => {
                         </div>
                     </div>
                     <div className="mx-auto mt-4">
-                        <span>অ্যাকাউন্ট আছে? <span className="text-green-700">সাইন ইন করুন</span></span>
+                        <span>অ্যাকাউন্ট আছে? <Link href='/signin' className="text-green-700">সাইন ইন করুন</Link></span>
                     </div>
                 </fieldset>
             </form>
